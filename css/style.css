@@ -1,0 +1,25 @@
+
+div
+{
+	font-size: 13px;
+	color: red;
+}
+
+
+table
+{
+	border: 2px gray SOLID;
+}
+
+#submit
+{
+	height: 50px; 
+	width: 185px; 
+	font-weight: bold; 
+	font-size: 18;
+}
+
+#jsoptions
+{
+	
+}

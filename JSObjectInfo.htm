@@ -1,0 +1,545 @@
+<HTML>
+
+<HEAD>
+
+	<LINK REL="stylesheet" HREF="css/style.css" />
+
+	<SCRIPT TYPE="text/javascript" SRC="js/validation.js" >   </SCRIPT>
+
+	<SCRIPT TYPE="text/javascript" SRC="js/objectsinfo.js" >   </SCRIPT>
+	
+</HEAD>
+
+<BODY>
+
+<div id="jsoptions" align="center">
+
+	<img src="images/logo_meta.gif" id="topImage" name="topImage1" align="center" longdesc="http://metacube.com" lowsrc="images/logo_meta_low.gif"/>
+	<BR />
+	<select id="options" onchange="showInfo(this.selectedIndex)">    
+		<option> Select Information </option>
+		<option>1.  Return the number of elements in a form.</option>
+        <option>2.  Return the method for sending form data.</option>
+        <option>3.  Return the value of each element in a form.</option>
+        <option>4.  Return the innerHTML of the first anchor in a document</option>
+        <option>5.  Return the number of forms in a document</option>
+        <option>6.  Return the name of the first form in a document</option>
+        <option>7.  Return the number of images in a document</option>
+        <option>8.  Return the id of the first image in a document</option>
+        <option>9.  Add border to an image</option>
+        <option>10. Change the height and width of an image</option>
+        <option>11. Set the hspace and vspace properties of an image</option>
+        <option>12. Return the value of the longdesc attribute of an image</option>
+        <option>13. Create a link to a low-resolution version of an image</option>
+        <option>14. Return the name of an image</option>
+        <option>15. Change the src of an image</option>
+        <option>16. Set/Return the language code of the linked document using hreflang of Link Object</option>
+	</select>
+	<br />
+	<br />
+</div>
+
+<FORM ACTION="#" METHOD="post" id="regForm" name="regForm1" onsubmit="return validateForm();">
+
+<TABLE cellpadding="5" align="center">
+
+	<TR>
+		<TD colspan=3 align="left">
+			<B> Create Your Account </B>
+		</TD>
+	</TR>
+	<TR>
+		<TD align="right" rowspan=1 valign="top" ID="emailLabel">
+			<FONT COLOR="red"> * </FONT>
+			Email ID:
+		</TD>
+		<TD colspan=2 align="left">
+		
+			<INPUT TYPE="text" ID=email ALT="Email Address" onblur="isEmpty(this, emailLabel); checkEmail(this, emailLabel)"/>
+			
+			<DIV ID="emailError"> </DIV>
+		
+		</TD>
+	</TR>
+	<TR>
+		<TD>
+		</TD>
+		<TD colspan=1 align="left">
+		
+			<FONT SIZE=-1>Enter your email address. </FONT>
+			
+		</TD>
+	</TR>
+	<TR>
+		<TD align="right" valign="top"  ID="pwdLabel">
+			<FONT COLOR="red"> * </FONT>
+			Password:
+		</TD>
+		<TD colspan=2 align="left">
+		
+			<INPUT TYPE="password" ID="pwd" ALT="Password" onblur="isEmpty(this, pwdLabel)" />
+			
+			<DIV ID="pwdError"> </DIV>
+		
+		</TD>
+	</TR>
+	<TR>
+		<TD align="right" valign="top"  ID="confirmPwdLabel">
+			<FONT COLOR="red"> * </FONT>
+			Confirm Password:
+		</TD>
+		<TD colspan=2 align="left">
+		
+			<INPUT TYPE="password" ID="confirmPwd" ALT="Confirm Password" onblur="isEmpty(this, confirmPwdLabel); checkPassword(pwd, this);" />
+			
+			<DIV ID="confirmPwdError"> </DIV>
+			
+		</TD>
+	</TR>
+	<TR>
+		<TD colspan=3>
+			<HR />
+		</TD>
+	</TR>
+	
+	
+	<TR>
+		<TD colspan=3 align="left">
+			<B> Contact Details </B> This is where recruiters and employers will contact you for jobs.
+		</TD>
+	</TR>
+	<TR>
+		<TD align="right">
+			Your Name:
+		</TD>
+		<TD colspan=2 align="left">
+			<INPUT TYPE="text" ID=name />
+			
+		</TD>
+	</TR>
+	<TR>
+		<TD align="right" valign="top"  ID="locationLabel">
+			<FONT COLOR="red"> * </FONT>
+			Current Location:
+		</TD>
+		<TD colspan=2 align="left">
+			<SELECT style="width:200px" ID="location" TITLE="Location" onblur="isSelected(this, locationLabel)">
+				<OPTION>Select City</OPTION>
+				<OPTION>Delhi</OPTION>
+				<OPTION>Mumbai</OPTION>
+				<OPTION>Hyderabad</OPTION>
+				<OPTION>Chennai</OPTION>
+				<OPTION>Kolkata</OPTION>
+				<OPTION>Raipur</OPTION>
+				<OPTION>Panji </OPTION>
+				<OPTION>Vasco Da Gama</OPTION>
+				<OPTION>Ahmedabad</OPTION>
+				<OPTION>Bhuj</OPTION>
+				<OPTION>Gandhinagar</OPTION>
+				<OPTION>Rajkot</OPTION>
+				<OPTION>Surat</OPTION>
+				<OPTION>Vadodara</OPTION>
+				<OPTION>Chandigarh</OPTION>
+				<OPTION>Faridabad</OPTION>
+				<OPTION>Panipat</OPTION>
+				<OPTION>Rohtak</OPTION>
+				<OPTION>Dalhousie</OPTION>
+				<OPTION>Dharmasal</OPTION>
+				<OPTION>Kulu/Manali</OPTION>
+				<OPTION>ShimlaJammu</OPTION>
+				<OPTION>Srinagar</OPTION>
+				<OPTION>Dhanbad</OPTION>
+				<OPTION>Jamshedpur</OPTION>
+				<OPTION>RanchiBengaluru </OPTION>
+				<OPTION>Dharwad</OPTION>
+				<OPTION>Mangalore</OPTION>
+				<OPTION>Mysoru</OPTION>
+				<OPTION>Cochin</OPTION>
+				<OPTION>Kochi</OPTION>
+				<OPTION>Kollam</OPTION>
+				<OPTION>Kozhikode</OPTION>
+				<OPTION>Thrissur</OPTION>
+				<OPTION>Trivandrum</OPTION>
+				<OPTION>Bhopal</OPTION>
+				<OPTION>Gwalior</OPTION>
+				<OPTION>Indore</OPTION>
+				<OPTION>Jabalpur</OPTION>
+				<OPTION>UjjainAhmednagar</OPTION>
+				<OPTION>Aurangabad</OPTION>
+				<OPTION>Jalgaon</OPTION>
+				<OPTION>Kolhapur</OPTION>
+				<OPTION>Mumbai </OPTION>
+				<OPTION>Nagpur</OPTION>
+				<OPTION>Nasik</OPTION>
+				<OPTION>Pune</OPTION>
+				<OPTION>Bhubaneshwar</OPTION>
+				<OPTION>Cuttack</OPTION>
+				<OPTION>Puri</OPTION>
+				<OPTION>Rourkela</OPTION>
+				<OPTION>Amritsar</OPTION>
+				<OPTION>Bathinda</OPTION>
+				<OPTION>Jalandhar</OPTION>
+				<OPTION>Ludhiana</OPTION>
+				<OPTION>Mohali</OPTION>
+				<OPTION>Pathankot</OPTION>
+				<OPTION>Patiala</OPTION>
+				<OPTION>Ajmer</OPTION>
+				<OPTION>Jaipur</OPTION>
+				<OPTION>Jaisalmer</OPTION>
+				<OPTION>Jodhpur</OPTION>
+				<OPTION>Kota</OPTION>
+				<OPTION>Udaipur</OPTION>
+				<OPTION>Chennai</OPTION>
+				<OPTION>Coimbatore</OPTION>
+				<OPTION>Cuddalore</OPTION>
+				<OPTION>Madurai</OPTION>
+				<OPTION>Tirunalveli</OPTION>
+				<OPTION>Trichy</OPTION>
+				<OPTION>Tuticorin</OPTION>
+				<OPTION>Vellore</OPTION>
+				<OPTION>Pondicherry</OPTION>
+				<OPTION>Agra</OPTION>
+				<OPTION>Aligarh</OPTION>
+				<OPTION>Allahabad</OPTION>
+				<OPTION>Bareilly</OPTION>
+				<OPTION>Faizabad</OPTION>
+				<OPTION>Ghaziabad</OPTION>
+				<OPTION>Gorakhpur</OPTION>
+				<OPTION>Kanpur</OPTION>
+				<OPTION>Lucknow</OPTION>
+				<OPTION>Mathura</OPTION>
+				<OPTION>Meerut</OPTION>
+				<OPTION>Noida</OPTION>
+				<OPTION>Varanasi</OPTION>
+				<OPTION>Dehradun</OPTION>
+				<OPTION>Roorkee</OPTION>
+				<OPTION>Durgapur</OPTION>
+				<OPTION>Kharagpur</OPTION>
+			</SELECT>
+			
+			<INPUT TYPE="checkbox" ID="country" onChange="changeDropdown(location)"> Not from India </INPUT>
+			
+			<DIV ID="locationError"> </DIV>
+			
+			
+		</TD>
+	</TR>
+	<TR>
+		<TD align="right" valign="top" ID="mobileLabel">
+			<FONT COLOR="red"> * </FONT>
+			Mobile:
+		</TD>
+		<TD colspan=2 align="left">
+		
+			<INPUT TYPE="text" ID="mobile" ALT="Mobile No." onblur="isEmpty(this, mobileLabel); checkMobileNo(this, mobileLabel)" />
+			
+			<DIV ID="mobileError"> </DIV>
+		</TD>
+	</TR>
+	<TR>
+		<TD>
+		</TD>
+		<TD colspan=1 align="left">
+			<FONT SIZE=-1>I you do not have a mobile, enter <A name="landlineNo" HREF="" hreflang="en">Landline no.<a> </FONT>
+		</TD>
+	</TR>
+	<TR>
+		<TD colspan=3>
+			<HR />
+		</TD>
+	</TR>
+	
+	
+	<TR>
+		<TD colspan=3 align="left">
+			<B> Current Professional Details </B>
+		</TD>
+	</TR>
+	<TR>
+		<TD align="right" rowspan=1 valign="top"  ID="expLabel">
+			<FONT COLOR="red"> * </FONT>
+			Total Experience:
+		</TD>
+		<TD colspan=2 align="left">
+			<SELECT ID="exp" TITLE="Year" onblur="isSelected(this, expLabel)">
+				<OPTION> Select </OPTION>
+				<OPTION> Fresher </OPTION>
+				<OPTION> 0 </OPTION>
+				<OPTION> 1 </OPTION>
+				<OPTION> 2 </OPTION>
+				<OPTION> 3 </OPTION>
+				<OPTION> 5+ </OPTION>
+				<OPTION> 10+ </OPTION>
+				
+			</SELECT>
+			Years
+			<SELECT ID="expMonth" TITLE="Month" onblur="isSelected(this)">
+				<OPTION> Select </OPTION>
+				<OPTION> 0 </OPTION>
+				<OPTION> 1 </OPTION>
+				<OPTION> 2 </OPTION>
+				<OPTION> 3 </OPTION>
+				<OPTION> 4 </OPTION>
+				<OPTION> 5 </OPTION>
+				<OPTION> 6 </OPTION>
+				<OPTION> 7 </OPTION>
+				<OPTION> 8 </OPTION>
+				<OPTION> 9 </OPTION>
+				<OPTION> 10 </OPTION>
+				<OPTION> 11 </OPTION>
+				
+			</SELECT>
+			Months
+			<DIV>
+			
+				<DIV ID="expError" STYLE="float: left"> </DIV>
+				
+				<DIV ID="expMonthError" STYLE="float: left; padding-left: 20px"> </DIV>
+				
+			</DIV>
+			
+		</TD>
+	</TR>
+	<TR>
+		<TD align="right" valign="top"  ID="industryLabel">
+			<FONT COLOR="red"> * </FONT>
+			Current Industry:
+		</TD>
+		<TD colspan=2 align="left">
+			<SELECT STYLE="width: 300px" ID="industry" TITLE="Current Industry" onblur="isSelected(this, industryLabel)">
+				<OPTION> Select Industry </OPTION>
+				<OPTION>IT-Software/Software Services</OPTION>
+				<OPTION>Accounting/Finance</OPTION>
+				<OPTION>Fresher/Trainee</OPTION>
+				<OPTION>Banking/Financial Services/Broking</OPTION>
+				<OPTION>Construction/Engineering/Cement/Metals</OPTION>
+			</SELECT>
+			<DIV ID="industryError"> </DIV>
+		</TD>
+	</TR>
+	<TR>
+		<TD align="right" valign="top" ID="areaLabel">
+			<FONT COLOR="red"> * </FONT>
+			Functional Area:
+		</TD>
+		<TD colspan=2 align="left">
+			<SELECT STYLE="width: 300px" ID="area" TITLE="Functional Area" onfocus="loadAreaList()" onblur="isSelected(this, areaLabel)">
+				<OPTION> Select </OPTION>
+			</SELECT>
+			
+			<DIV ID="areaError"> </DIV>
+			
+		</TD>
+	</TR>
+	<TR>
+		<TD>
+		</TD>
+		<TD colspan=1 align="left">
+			<FONT SIZE=-1><A name="functionalArea" HREF=""> What is my Functional Area and Industry? </A></FONT>
+		</TD>
+	</TR>
+	<TR>
+		<TD align="right" valign="top"  ID="keySkillsLabel">
+			<FONT COLOR="red"> * </FONT>
+			Key Skills:
+		</TD>
+		<TD colspan=2 align="left">
+			<TEXTAREA ID="keySkills" MAXLENGTH="250" cols=35 STYLE="width: 300px" PLACEHOLDER="Please enter your areas of expertise/specialization." ALT="Key Skills" onfocus="this.value=''" onblur="isEmpty(this, keySkillsLabel)"></TEXTAREA>
+			
+			<DIV ID="keySkillsError"> </DIV>
+			
+		</TD>
+	</TR>
+	<TR>
+		<TD align="right" valign="top"  ID="headlineLabel">
+			<FONT COLOR="red"> * </FONT>
+			Resume Headline:
+		</TD>
+		<TD colspan=2 align="left">
+			<INPUT TYPE="text" ID="headline" PLACEHOLDER="Describe your professional backgroud in one line." STYLE="width: 300px" ALT="Resume Headline" onfocus="this.value=''" onblur="isEmpty(this, headlineLabel)">
+			</INPUT>
+			
+			<DIV ID="headlineError"> </DIV>
+			
+		</TD>
+	</TR>
+	<TR>
+		<TD>
+		</TD>
+		<TD colspan=1 align="right">
+			<FONT SIZE=-1>Max 250 characters </FONT>
+		</TD>
+	</TR>
+	<TR>
+		<TD colspan=3>
+			<HR>
+		</TD>
+	</TR>
+	
+	<TR>
+		<TD colspan=3 align="left">
+			<B> Educational Details </B> Please list your areas of study
+		</TD>
+	</TR>
+	<TR>
+		<TD align="right" rowspan=1 valign="top" ID="eduLabel">
+			<FONT COLOR="red"> * </FONT>
+			Basic/Graduation:
+		</TD>
+		<TD colspan=2 align="left">
+			<SELECT STYLE="width: 200px" ID="edu" TITLE="Basic Graduation" onblur="isSelected(this, eduLabel)">
+				<option value="0" label="Select"> Select </option>
+				<option value="1" label="B.Tech/B.E."> B.Tech/B.E. </option>
+				<option value="2" label="B.A"> B.A </option>
+				<option value="3" label="B.Arch"> B.Arch </option>
+				<option value="4" label="BCA"> BCA </option>
+				<option value="5" label="B.B.A"> B.B.A </option>
+				<option value="6" label="B.Com"> B.Com </option>
+				<option value="7" label="B.Ed"> B.Ed </option>
+				<option value="8" label="BDS"> BDS </option>
+				<option value="9" label="BHM"> BHM </option>
+				<option value="10" label="B.Pharma"> B.Pharma </option>
+				<option value="11" label="B.Sc"> B.Sc </option>
+				<option value="12" label="LLB"> LLB </option>
+				<option value="13" label="MBBS"> MBBS </option>
+				<option value="14" label="Diploma"> Diploma </option>
+
+			</SELECT>
+			
+			<DIV ID="eduError"> </DIV>
+			
+		</TD>
+	</TR>
+	<TR>
+		<TD align="right" rowspan=1>
+			Post Graduation:
+		</TD>
+		<TD colspan=2 align="left">
+			<SELECT STYLE="width: 200px" ID="pg">
+				<OPTION> Select </OPTION>
+				<OPTION> M.Tech </OPTION>
+				<OPTION> M.S </OPTION>
+				<OPTION> M.B.A </OPTION>
+				<OPTION> M.Sc </OPTION>
+				<OPTION> M.C.A </OPTION>
+				<OPTION> M.Com </OPTION>
+				<OPTION> M.A </OPTION>
+				<OPTION> M.Ed </OPTION>
+			</SELECT>
+			
+			<DIV ID="pgError"> </DIV>
+			
+		</TD>
+	</TR>
+	<TR>
+		<TD align="right" rowspan=1>
+			Doctorate/Phd:
+		</TD>
+		<TD colspan=2 align="left">
+			<SELECT STYLE="width: 200px" ID="phd">
+				<OPTION> Select </OPTION>
+				<OPTION> Computer Security </OPTION>
+				<OPTION> Neural Network </OPTION>
+				<OPTION> Psychology </OPTION>
+				<OPTION> Artificial Intelligence </OPTION>
+			</SELECT>
+			
+			<DIV ID="phdError"> </DIV>
+			
+		</TD>
+	</TR>
+	<TR>
+		<TD colspan=3>
+			<HR>
+		</TD>
+	</TR>
+	
+	<TR>
+		<TD colspan=3 align="left">
+			<B> Upload Resume </B> Please upload a detailed resume.
+		</TD>
+	</TR>
+	<TR>
+		<TD align="right" rowspan=1>
+			Attach Resume :
+		</TD>
+		<TD colspan=2 align="left">
+			<INPUT TYPE="hidden" ID="MAX_FILE_SIZE" VALUE="200" />
+			<INPUT TYPE="file" ID="resume" ACCEPT="application/doc, application/pdf, application/rtf " VALUE="Choose File" />
+		</TD>
+	</TR>
+	<TR>
+		<TD>
+		</TD>
+		<TD colspan=2 align="left">
+			<TEXTAREA cols=35 MAXLENGTH=250 onfocus="this.value=''" >Supported Formats: doc, docx, rtf. Max file size: 200 Kb </TEXTAREA>
+		</TD>
+	</TR>
+	<TR>
+		<TD colspan=3>
+			<HR />
+		</TD>
+	</TR>
+	
+	<TR>
+		<TD colspan=3 align="left">
+			<B> Mailer and Privacy Settings </B> 
+		</TD>
+	</TR>
+	<TR>
+		<TD align="left" rowspan=1>
+			<INPUT TYPE="checkbox" ID="jobalert" VALUE="jobalert"/> Job Alerts
+		</TD>
+		<TD colspan=2 align="left">
+			<INPUT TYPE="checkbox" ID="impnotify" VALUE="impnotify" checked /> Important Notifications
+		</TD>
+	</TR>
+	<TR>
+		<TD align="left" rowspan=1>
+			<INPUT TYPE="checkbox" ID="ffemails" VALUE="ffemails" /> Naukri FastForward E-Mails 
+			<IMG id="icon1" id="iconName1" SRC="images/icon.png" />
+		</TD>
+		<TD colspan=2 align="left">
+			<INPUT TYPE="checkbox" ID="comm" VALUE="comm" checked/> Communication from Clients (Voice/Calls/SMS)
+			<IMG id="icon2" id="iconName2" SRC="images/icon.png" />
+		</TD>
+	</TR>
+	<TR>
+		<TD align="left" rowspan=1>
+			<INPUT TYPE="checkbox" ID="ffsms" VALUE="ffsms" /> Naukri FastForward Calls/SMS
+			<IMG id="icon3" id="iconName3" SRC="images/icon.png" />
+		</TD>
+		<TD colspan=2 align="left">
+			<INPUT TYPE="checkbox" ID="other" VALUE="other" checked /> Other Promotions/ Special Offers
+		</TD>
+	</TR>
+	<TR>
+		<TD colspan=3>
+			<HR />
+		</TD>
+	</TR>
+	
+	<TR>
+		<TD align="left" colspan=3 valign="top">
+			<INPUT TYPE="checkbox" ID="toc" VALUE="toc"/> 
+			I have read and understood and agree to the <A HREF=""> Terms and Conditions </A> governing the use
+			<DIV ID="tocDiv"> </DIV>
+		</TD>
+	</TR>
+	
+	<TR>
+		<TD align=center colspan=3>
+		
+			<INPUT TYPE="submit" ID="submit" VALUE="Create my Account" /> 
+			
+		</TD>
+	</TR>
+
+	
+	
+</TABLE>
+
+</FORM>
+
+</BODY>
+</HTML>
